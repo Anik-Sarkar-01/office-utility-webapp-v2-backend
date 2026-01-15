@@ -15,7 +15,7 @@ const app = express();
 // CORS
 const corsOptions = {
   origin: [
-    "https://employee-management-system-indol-xi.vercel.app",
+    "https://demstv.vercel.app",
     "http://localhost:3000",
   ],
   methods: ["GET", "POST", "PATCH", "DELETE"],
