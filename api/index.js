@@ -17,6 +17,7 @@ const corsOptions = {
   origin: [
     "https://demstv.vercel.app",
     "http://localhost:3000",
+    "https://dmstv.netlify.app",
   ],
   methods: ["GET", "POST", "PATCH", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
