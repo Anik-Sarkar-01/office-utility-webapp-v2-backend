@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema(
     employeeId: {
       type: String,
       required: true,
-      unique: true, // ensures no duplicate employee IDs
+      unique: true,
       trim: true,
     },
 
@@ -47,15 +47,56 @@ const userSchema = new mongoose.Schema(
       required: true,
     },
 
+    dateOfBirth: {
+      type: Date,
+      required: true,
+    },
+
     isSuperUser: {
       type: Boolean,
       default: false,
     },
 
+    // New fields added
+    personInCharge: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+
+    personInChargePosition: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+
+    reportingTo: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+
+    reportingToPosition: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+
+    phone: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+
+    address: {
+      type: String,
+      trim: true,
+    },
+
     leaveDate: [
       {
         startDate: { type: String, default: "" },
-        leaveDate: { type: String, default: "" },
+        endDate: { type: String, default: "" },
         leave_status: { type: String, default: "pending" },
         leaveDays: { type: Number, default: 0 },
       },
@@ -63,14 +104,7 @@ const userSchema = new mongoose.Schema(
 
     image: {
       type: String,
-    },
-
-    address: {
-      type: String,
-    },
-
-    phone: {
-      type: String,
+      default: "",
     },
   },
   { timestamps: true }

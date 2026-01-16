@@ -33,6 +33,10 @@ const newUser = async (req, res) => {
     dateOfBirth,
     phone,
     joiningDate,
+    personInCharge,
+    personInChargePosition,
+    reportingTo,
+    reportingToPosition,
   } = req.body;
 
   try {
@@ -65,6 +69,10 @@ const newUser = async (req, res) => {
       phone,
       joiningDate,
       dateOfBirth,
+      personInCharge,
+      personInChargePosition,
+      reportingTo,
+      reportingToPosition,
       image: "uploads/images/user-default.jpg",
     });
 
