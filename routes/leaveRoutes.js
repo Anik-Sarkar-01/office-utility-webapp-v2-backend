@@ -7,8 +7,12 @@ const {
 } = require("../controllers/leaveContoller");
 
 const generateLeaveForm = require("../services/leaveFormGenerator");
+const { createLeaveApplication } = require("../controllers/leaveApplicationController");
+
 
 const leaveRoutes = express.Router();
+
+leaveRoutes.post("/apply",  createLeaveApplication);
 
 // Existing routes
 leaveRoutes.get("/applied-leave", leaveEmployee);
