@@ -6,18 +6,13 @@ const {
   pastLeaves,
 } = require("../controllers/leaveContoller");
 
-const { 
-  createLeaveApplication 
-} = require("../controllers/leaveApplicationController");
 
 const generateLeaveForm = require("../services/leaveFormGenerator");
-
 
 const leaveRoutes = express.Router();
 
 
 // routes
-leaveRoutes.post("/apply",  createLeaveApplication);
 leaveRoutes.get("/applied-leave", leaveEmployee);
 leaveRoutes.patch("/applyForleave/:uid", applyForLeave);
 leaveRoutes.patch("/approve-leave/:leaveId", approveLeave);
